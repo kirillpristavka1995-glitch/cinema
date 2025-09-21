@@ -17,17 +17,17 @@ const Billboard = () => {
   }, [openModal, movie?.id]);
 
   useEffect(() => {
-    if (movie?.videoUrl && videoRef.current) {
+    if (movie?.trailerUrl && videoRef.current) {
       if (Hls.isSupported()) {
         const hls = new Hls();
-        hls.loadSource(movie.videoUrl);
+        hls.loadSource(movie.trailerUrl);
         hls.attachMedia(videoRef.current);
       } else if (videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
         // для Safari
-        videoRef.current.src = movie.videoUrl;
+        videoRef.current.src = movie.trailerUrl;
       }
     }
-  }, [movie?.videoUrl]);
+  }, [movie?.trailerUrl]);
 
   return (
     <div className="relative h-[56.25vw]">

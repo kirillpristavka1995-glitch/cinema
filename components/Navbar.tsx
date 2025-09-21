@@ -66,7 +66,7 @@ const Navbar = () => {
                     <NavbarItem label="Films" />
                     <NavbarItem label="New & Popular" />
                     <NavbarItem label="My List" />
-                    <NavbarItem label="Browse by languages" />
+                    <NavbarItem label="Browse by Languages" />
                 </div>
                 <div onClick={toggleMobileMenu} className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative">
                     <p className="text-white text-sm">Browse</p>

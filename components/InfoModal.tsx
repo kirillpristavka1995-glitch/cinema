@@ -26,16 +26,16 @@ const InfoModal = ({
     }, [visible]);
 
     useEffect(() => {
-        if (data?.videoUrl && videoRef.current) {
+        if (data?.trailerUrl && videoRef.current) {
         if (Hls.isSupported()) {
             const hls = new Hls();
-            hls.loadSource(data.videoUrl);
+            hls.loadSource(data.trailerUrl);
             hls.attachMedia(videoRef.current);
         } else if (videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
-            videoRef.current.src = data.videoUrl;
+            videoRef.current.src = data.trailerUrl;
         }
         }
-    }, [data?.videoUrl]);
+    }, [data?.trailerUrl]);
 
     const handleClose = useCallback(() => {
         setIsVisible(false);
@@ -87,7 +87,6 @@ const InfoModal = ({
                         <video
                             className="
                                 w-full
-                                brightness-[60%]
                                 object-cover
                                 h-full
                             "

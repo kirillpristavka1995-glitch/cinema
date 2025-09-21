@@ -28,7 +28,7 @@ const MobileMenu = ({
                     My List
                 </div>
                 <div className="px-3 text-center text-white hover:underline">
-                    Browse by languages
+                    Browse by Languages
                 </div>
             </div>
         </div>

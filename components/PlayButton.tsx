@@ -1,5 +1,6 @@
 "use client";
 
+import useInfoModal from "@/hooks/useInfoModal";
 import { useRouter } from "next/navigation";
 import { BsFillPlayFill } from "react-icons/bs";
 
@@ -11,10 +12,16 @@ const PlayButton = ({
     movieId
 }: PlayButtonProps) => {
     const router = useRouter();
+    const { closeModal } = useInfoModal();
+
+    const handlePlay = () => {
+        router.push(`/watch/${movieId}`);
+        closeModal();
+    };
 
     return (
         <button
-            onClick={() => {router.push(`/watch/${movieId}`)}}
+            onClick={handlePlay}
             className="
                 bg-white
                 rounded-md
