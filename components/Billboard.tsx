@@ -48,8 +48,22 @@ const Billboard = () => {
         </p>
         <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
           <PlayButton movieId={movie?.id} />
-          <button onClick={handleOpenModal} className="bg-white/30 text-white rounded-md py-1 md:py-2 px-2 md:px-4 text-xs lg:text-lg font-semibold flex flex-row items-center hover:bg-white/20 transition cursor-pointer">
-            <AiOutlineInfoCircle className="mr-1" />
+          <button onClick={handleOpenModal} className="
+            bg-white/30
+            text-white
+            rounded-md
+            py-1 md:py-2
+            px-2 md:px-4
+            w-auto
+            text-xs lg:text-lg
+            font-semibold
+            flex flex-row
+            items-center
+            hover:bg-white/20
+            transition
+            cursor-pointer
+          ">
+            <AiOutlineInfoCircle size={25} className="mr-1" />
             More Info
           </button>
         </div>

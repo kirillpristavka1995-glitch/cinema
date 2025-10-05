@@ -10,7 +10,7 @@ const MovieCard = ({
     const { openModal } = useInfoModal();
 
     return (
-        <div onClick={() => openModal(data?.id)} className="group bg-zinc-900 col-span relative h-[12vw]">
+        <div onClick={() => openModal(data?.id)} className="group bg-zinc-900 col-span relative">
             <img className="
                 cursor-pointer
                 object-cover
@@ -18,7 +18,6 @@ const MovieCard = ({
                 shadow-xl
                 rounded-md
                 w-full
-                h-[12vw]
                 hover:opacity-50"
                 src={data.thumbnailUrl}
                 alt="Thumbnail"
