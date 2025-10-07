@@ -5,7 +5,7 @@ export async function GET() {
   try {
     const movies = await prisma.movie.findMany({
       orderBy: {
-        createdAt: "desc", // сортировка по дате добавления — новые сверху
+        id: "desc", // сортировка по дате добавления — новые сверху
       },
     }); // получаем все фильмы
 
