@@ -10,4 +10,5 @@ body {
 
 html {
   @apply h-full;
+  scrollbar-width: none;
 }
